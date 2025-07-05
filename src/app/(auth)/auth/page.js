@@ -147,7 +147,7 @@ export default function AuthPage() {
         }}>
           {isSignup
             ? "Already have an account? Login"
-            : "Don't have an account? Sign Up"}
+            : "Dont have an account? Sign Up"}
         </p>
       </form>
     </div>
