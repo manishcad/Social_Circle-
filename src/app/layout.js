@@ -31,6 +31,7 @@ export default function RootLayout({ children }) {
             </Layout>
           </Providers>
         </Suspense>
+        
       </body>
     </html>
   );

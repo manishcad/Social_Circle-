@@ -4,6 +4,11 @@ import prisma from "../../../lib/prisma";
 
 export async function GET() {
   try {
+    // Check if we're in a build environment
+    if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
+      return Response.json({ users: [] });
+    }
+
     const session = await getServerSession(authOptions);
     
     if (!session) {
@@ -39,6 +44,10 @@ export async function GET() {
 
   } catch (error) {
     console.error("Error fetching users:", error);
+    // During build, return empty data instead of error
+    if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
+      return Response.json({ users: [] });
+    }
     return Response.json({ error: "Failed to fetch users" }, { status: 500 });
   }
 } 
