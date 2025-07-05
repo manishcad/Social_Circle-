@@ -19,7 +19,7 @@ export default function NotFound() {
         <div className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-white/20 p-8 mb-8">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Page Not Found</h1>
           <p className="text-gray-600 mb-6">
-            Sorry, the page you're looking for doesn't exist or the page is still under maintenance.
+            Sorry, the page youre looking for doesnt exist or the page is still under maintenance.
           </p>
           
           {/* Error Code */}
