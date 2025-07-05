@@ -4,11 +4,6 @@ import prisma from "../../../lib/prisma";
 
 export async function GET(request) {
   try {
-    // Check if we're in a build environment
-    if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
-      return Response.json({ posts: [], hasMore: false, currentPage: 1, totalPosts: 0 });
-    }
-
     const session = await getServerSession(authOptions);
     
     if (!session) {
@@ -111,10 +106,6 @@ export async function GET(request) {
 
   } catch (error) {
     console.error("Error fetching feed:", error);
-    // During build, return empty data instead of error
-    if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
-      return Response.json({ posts: [], hasMore: false, currentPage: 1, totalPosts: 0 });
-    }
     return Response.json({ error: "Failed to fetch feed" }, { status: 500 });
   }
 } 

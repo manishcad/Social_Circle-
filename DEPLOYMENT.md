@@ -31,9 +31,11 @@ CLOUDINARY_API_SECRET=your_cloudinary_api_secret
 ## Build Configuration
 
 The project is configured with:
-- `prisma generate` runs during build
 - API routes are protected from build-time execution
 - External services are initialized only at runtime
+- Prisma Client is generated automatically by Vercel
+
+**Note:** For local development, you may need to run `npx prisma generate` manually if you encounter permission issues on Windows.
 
 ## Deployment Steps
 

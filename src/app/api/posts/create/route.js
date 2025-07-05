@@ -4,11 +4,6 @@ import prisma from "../../../lib/prisma";
 import { v2 as cloudinary } from 'cloudinary';
 
 export async function POST(request) {
-  // Prevent execution during build time
-  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
-    return Response.json({ error: "Not available during build" }, { status: 503 });
-  }
-
   // Configure Cloudinary inside the function to avoid build-time issues
   cloudinary.config({
     cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
