@@ -3,9 +3,17 @@ import { hash } from "bcryptjs";
 import prisma from "../../lib/prisma";
 import DOMPurify from 'isomorphic-dompurify';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req) {
+  // Prevent execution during build time
+  if (process.env.NODE_ENV === 'production' && !process.env.VERCEL_ENV) {
+    return new Response(
+      JSON.stringify({ error: "Not available during build" }),
+      { status: 503 }
+    );
+  }
+
+  // Initialize Resend inside the function to avoid build-time issues
+  const resend = new Resend(process.env.RESEND_API_KEY);
   try {
     const { name, email, password } = await req.json();
     
