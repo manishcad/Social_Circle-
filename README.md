@@ -45,6 +45,17 @@
 - **Error Handling** - Comprehensive error handling and user feedback
 - **Security Headers** - Enhanced security with proper headers
 
+### ScreenShots
+!![My Image](public/screenshot/Screenshot1.png)
+!![My Image](public/screenshot/Screenshot2.png)
+!![My Image](public/screenshot/Screenshot3.png)
+!![My Image](public/screenshot/Screenshot4.png)
+!![My Image](public/screenshot/Screenshot5.png)
+!![My Image](public/screenshot/Screenshot6.png)
+!![My Image](public/screenshot/Screenshot7.png)
+!![My Image](public/screenshot/Screenshot8.png)
+!![My Image](public/screenshot/Screenshot9.png)
+
 ## 🏗 Architecture
 
 ```
@@ -148,16 +159,7 @@ social-circle/
 - **PostCSS** - CSS processing
 - **Prisma Studio** - Database management
 
-### ScreenShots
-!![My Image](public/screenshot/Screenshot1.png)
-!![My Image](public/screenshot/Screenshot2.png)
-!![My Image](public/screenshot/Screenshot3.png)
-!![My Image](public/screenshot/Screenshot4.png)
-!![My Image](public/screenshot/Screenshot5.png)
-!![My Image](public/screenshot/Screenshot6.png)
-!![My Image](public/screenshot/Screenshot7.png)
-!![My Image](public/screenshot/Screenshot8.png)
-!![My Image](public/screenshot/Screenshot9.png)
+
 
 
 ## 📊 Database Schema
